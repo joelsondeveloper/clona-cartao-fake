@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(61deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+.main {
+  padding: 5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 37.5rem;
+}
+
+.hero-banner__headlines {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-banner__headlines__title, .hero-banner__headlines__cta {
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 3rem;
+  text-wrap: balance;
+}
+
+.hero-banner__headlines__title {
+  color: #fff;
+
+  span {
+    display: block;
+  }
+}
+
+.hero-banner__headlines__cta {
+  color: #3B82F6;
+}
+
+.hero-banner__subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.hero-banner__subtitle__text {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #94A3B8;
+}
+
+.hero-banner__subtitle__info {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  color: #F59E0B;
+  background-color: #374151;
+  padding: .5rem 1rem;
+  border-radius: 1.25rem;
+  width: fit-content;
+}
+
+.hero-banner-card {
+  position: absolute;
+  margin-top: 1000px;
+}
+
+
+.floating-card {
+  scale: 0.8;
+  position: fixed;
+  width: 380px;
+  height: 240px;
+  top: 50%;
+  right: 0;
+  transform: translate(0%, -50%);
+  perspective: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  user-select: none;
+  cursor: default;
+  background: linear-gradient(145deg, #1e1e2f, #282846);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  color: white;
+  padding: 20px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+  z-index: 1;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0; left: 0;
+  background: linear-gradient(135deg, #3b3b98, #130f40);
+  padding: 20px;
+  /* box-sizing: border-box; */
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chip {
+  width: 50px;
+  height: 35px;
+  background: url(../images/chip-removebg-preview.png);
+  background-size: 125%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #bda43f;
+  margin-top: -30px;
+}
+
+.logo {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  align-self: flex-end;
+  color: #fff8;
+}
+
+.card-number {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.card-info label {
+  font-size: 0.6rem;
+  opacity: 0.7;
+  margin-bottom: 4px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.card-holder, .card-valid {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.magnetic-strip {
+  background: black;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+.signature-cvv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.signature {
+  background: #eee;
+  width: 70%;
+  height: 35px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px #ccc;
+}
+
+.cvv {
+  width: 25%;
+  font-size: 0.8rem;
+}
+
+.cvv label {
+  font-size: 0.6rem;
+  opacity: 0.7;
+  margin-bottom: 4px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.disclaimer {
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 25px;
+  opacity: 0.5;
+  font-style: italic;
+}

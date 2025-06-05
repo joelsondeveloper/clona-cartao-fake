@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clona cartão</title>
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <section class="hero-banner">
+        <div class="hero-banner__headlines">
+          <h1 class="hero-banner__headlines__title">
+            Será que seu cartão <br> vazou na Deep Web? <span>😱</span>
+          </h1>
+          <p class="hero-banner__headlines__cta">Descubra agora!</p>
+        </div>
+        <div class="hero-banner__subtitle">
+          <p class="hero-banner__subtitle__text">
+            realize uma verificação de vazamento do seu cartão de crédito... e
+            se protega!
+          </p>
+          <span class="hero-banner__subtitle__info"
+            ><img src="images/Info.svg" alt="icone de informação" />
+            <p>100% seguro, 100% anonimo</p></span
+          >
+        </div>
+        <div class="hero-banner__cta">
+          <button class="hero-banner__cta__button">
+            <img src="images/Zap.svg" alt="icone de zap" />
+            <p>Comecar verificação</p>
+          </button>
+          <button class="hero-banner__cta__button btn--transparent">
+            <img src="images/Play.svg" alt="icone de play" />
+            <p>Ver demo</p>
+          </button>
+        </div>
+        <div class="hero-banner__trust-indicators">
+          <div class="indicator">
+            <img src="images/Users.svg" alt="icone de usuarios" />
+            <div class="indicator__content">
+              <h3>50.000+</h3>
+              <p>Usuarios Verificados</p>
+            </div>
+          </div>
+          <div class="indicator">
+            <img src="images/Shield Check.svg" alt="icone de escudo" />
+            <div class="indicator__content">
+              <h3>100%</h3>
+              <p>Seguro</p>
+            </div>
+          </div>
+          <div class="indicator">
+            <img src="images/Star.svg" alt="icone de estrela" />
+            <div class="indicator__content">
+              <h3>4.7/5</h3>
+              <p>Avaliação</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero-banner-card">
+
+        <div class="floating-card">
+          <div class="card-front">
+            <div class="logo">BancoDev</div>
+            <div class="chip"></div>
+            <div id="display-number" class="card-number">•••• •••• •••• ••••</div>
+            <div class="card-info">
+              <div class="card-holder">
+                <label>TITULAR</label>
+                <div class="display-name">NOME DO TITULAR</div>
+              </div>
+              <div class="card-valid">
+                <label>VALIDADE</label>
+                <div class="display-valid">MM/AA</div>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="magnetic-strip"></div>
+            <div class="signature-cvv">
+              <div class="signature"></div>
+              <div class="cvv">
+                <label>CVV</label>
+                <div class="display-cvv">•••</div>
+              </div>
+            </div>
+            <div class="disclaimer">Use este cartão com responsabilidade</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
