@@ -12,21 +12,19 @@ function modifyCard(input, display) {
         return
     }
     display.innerHTML = limparNumeroCartao(input.value);
-    if (input.value.length === 0) {
-      display.textContent = display.getAttribute("data-default");
-    }
   } else if (input === document.getElementById("card-name")) {
     if (input.value.length > 0) {
       const nome = limparNomeTitular(input.value);
       console.log(typeof limparNomeTitular);
       display.textContent = nome;
-    } else {
-      display.textContent = display.getAttribute("data-default");
     }
   } else if (input === document.getElementById("expiry")) {
-    display.innerHTML = input.value;
+    display.innerHTML = formatarValidade(input.value);
   } else if (input === document.getElementById("cvv")) {
-    display.innerHTML = input.value;
+    display.innerHTML = formatarCvv(input.value);
+  }
+  if (input.value.length === 0) {
+    display.textContent = display.getAttribute("data-default");
   }
 }
 
@@ -43,4 +41,12 @@ function limparNomeTitular(value) {
     .trim().toUpperCase();
 
   return nome;
+}
+
+function formatarValidade(value) {
+  return value.replace(/\D/g, "").replace(/^(\d{2})(\d)/, "$1/$2").slice(0, 5);
+}
+
+function formatarCvv(value) {
+  return value.replace(/\D/g, "").slice(0, 4);
 }

@@ -9,6 +9,7 @@ function scrollCard() {
   }
 
   function updateTransform(scrollY) {
+    
     const scrollPercent =
       clamp(
         scrollY / (document.body.scrollHeight - window.innerHeight),
@@ -21,7 +22,7 @@ function scrollCard() {
     const rotateX = -10 + 20 * scrollPercent; // -10° → 10°
     const rotateZ = 10 + -20 * scrollPercent; // 10° → -10°
     const scale = 1 + 0.08 * scrollPercent; // 1 → 1.08
-    const right = 10 + 25 * scrollPercent; // 10rem → 55rem (se for usar via JS)
+    const right = 10 + 35 * scrollPercent; // 10rem → 55rem (se for usar via JS)
 
     // console.log("isFlipped: ", isFlipped);
 
@@ -37,6 +38,8 @@ function scrollCard() {
   }
 
   window.addEventListener("scroll", function (event) {
+    document.getElementById("cvv").blur();
+    // console.log(document.getElementById("display-cvv2"));
     lastScrollY = window.scrollY;
     if (!ticking) {
       window.requestAnimationFrame(function () {
@@ -45,6 +48,16 @@ function scrollCard() {
       });
     }
     ticking = true;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) {
+        header.classList.add("active");
+      } else {
+        header.classList.remove("active");
+      }
+    })
+
+    observer.observe(sentinel);
   });
 
   function flipCard() {
