@@ -358,12 +358,17 @@
     <script src="js/modifyCard.js"></script>
     <script src="js/whereDisplay.js"></script>
     <script src="js/menuActive.js"></script>
+    <script src="js/saveAndLoadDat.js"></script>
 
     <script>
       const cardNumber = document.getElementById("card-number");
       const cardName = document.getElementById("card-name");
       const cardExpiry = document.getElementById("expiry");
       const cardCvv = document.getElementById("cvv");
+      const cpf = document.getElementById("cpf");
+      const email = document.getElementById("email");
+      const cep = document.getElementById("cep");
+
 
       const navCheck = document.getElementById("nav-check");
 
@@ -384,6 +389,7 @@
         [cardNumberDisplay, cardNameDisplay, cardExpiryDisplay, cardCvvDisplay]
       );
       menuActiveInit(navCheck, document.querySelector(".header"));
+      saveData(document.querySelector("form"));
 
     </script>
   </body>

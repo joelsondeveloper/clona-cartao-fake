@@ -34,6 +34,7 @@ a {
   flex-direction: column;
   gap: 2rem;
   max-width: 37.5rem;
+  backdrop-filter: blur(2px);
   /* padding-top: 5rem; */
 }
 
@@ -254,7 +255,7 @@ a {
   align-items: center;
   gap: 1.5rem;
   text-align: center;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
 }
 
 .section-form__main__text {
@@ -731,4 +732,31 @@ a {
     }
   }
 
+}
+
+@media screen and (max-width: 37.5rem) {
+
+  .hero-banner__cta {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .hero-banner__trust-indicators {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .section-form__main__cardContainer {
+    display: none;
+  }
+
+  .section-form__main__form {
+    width: 100%;
+  }
+
+  .footer__content__links {
+    flex-wrap: wrap;
+  }
 }
