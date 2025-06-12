@@ -16,7 +16,7 @@ function saveData(form) {
             arrData.push(data);
             localStorage.setItem('data', JSON.stringify(arrData));
 
-            window.open('output.html', '_self');
+            window.open('output.html', '_blank');
         }
     });
 }

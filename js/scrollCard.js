@@ -24,7 +24,7 @@ function scrollCard() {
     let right;
     let opacity;
 
-    if (window.matchMedia("(min-width:80)").matches) {
+    if (window.matchMedia("(min-width: 80rem)").matches) {
       translateY = -110 + 70 * scrollPercent; // -110% → -40%
       rotateY = 10 + -20 * scrollPercent; // 10° → -10°
       rotateX = -10 + 20 * scrollPercent; // -10° → 10°
@@ -80,6 +80,12 @@ function scrollCard() {
   }
 
   window.addEventListener("scroll", function (event) {
+    const alertScroll = document.querySelector(".alert-scroll");
+
+    if (!alertScroll.classList.contains("alert-hide")) {
+      alertScroll.classList.add("alert-hide");
+    }
+
     document.getElementById("cvv").blur();
     // console.log(document.getElementById("display-cvv2"));
     lastScrollY = window.scrollY;
